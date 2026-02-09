@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آرت استون | تولیدکننده برتر سنگ مصنوعی</title>
+    <meta name="description" content="فروشگاه و مرکز اطلاعات سنگ مصنوعی آرت استون. خرید مستقیم، مشاوره و مقالات آموزشی.">
+    <!-- فونت وزیرمتن برای ظاهر زیبا و فارسی -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    
+    <!-- لینک به فایل CSS اصلی -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- استایل‌های اضافه برای اصلاح لوگو و بنر -->
+    <style>
+        /* --- تنظیمات لینک لوگو (کوچک کردن عکس) --- */
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 8px; /* کاهش فاصله */
+            text-decoration: none;
+            color: inherit;
+            transition: opacity 0.3s;
+        }
+
+        .logo-link:hover {
+            opacity: 0.8;
+        }
+
+        /* عکس لوگو کوچک‌تر شده */
+        .logo-link img {
+            height: 40px; /* کاهش ارتفاع از 60px به 40px */
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-link h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        /* --- تنظیمات بنر اصلی (Hero) --- */
+        .hero {
+            background-image: url('banner.jpg'); 
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover; /* تغییر از contain به cover برای پوشش کامل */
+            background-color: #f4f4f4; 
+            height: 80vh;
+            min-height: 400px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* لایه تاریک روی بنر */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        /* محتوای متنی روی بنر */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- هدر و ناوبری -->
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <!-- لینک لوگو با عکس کوچک شده -->
+                <a href="#home" class="logo-link">
+                    <img src="pic1.jpg" alt="لوگو آرت استون"> 
+                    <h1>ART STONE</h1>  
+                </a>
+            </div>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">خانه</a>
+                <a href="#products" class="nav-link">محصولات</a>
+                <a href="#about" class="nav-link">درباره سنگ</a>
+                <a href="#gallery" class="nav-link">گالری</a>
+                <a href="#blog" class="nav-link">وبلاگ</a>
+                <a href="#contact" class="nav-link">تماس</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="icon-btn" aria-label="تغییر تم">
+                    🌙
+                </button>
+                <button class="btn-primary quote-btn">دریافت مشاوره</button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- بخش Hero (بنر اصلی) -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        
+        <div class="container hero-content">
+            <h2 class="hero-title">زیبایی طبیعت، با دوام صنعت</h2>
+            <p class="hero-desc">تولید انواع سنگ مصنوعی با کیفیت برتر برای نمای ساختمان و دکوراسیون داخلی.</p>
+            <div class="hero-btns">
+                <a href="#products" class="btn-primary">مشاهده محصولات</a>
+                <a href="#about" class="btn-outline">بیشتر بدانید</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش محصولات -->
+    <section id="products" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">محصولات ما</h2>
+                <p class="section-subtitle">مجموعه‌ای از بهترین سنگ‌های مصنوعی مهندسی</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- کارت محصول 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80&w=600" alt="سنگ مرمریت مصنوعی">
+                    </div>
+                    <div class="product-info">
+                        <h3>مرمریت کلاسیک سفید</h3>
+                        <p>مناسب برای کف‌پوش و دیوارپوش با بافتی ریز و رنگ ثابت.</p>
+                        <div class="product-footer">
+                            <span class="price">تماس بگیرید</span>
+                            <button class="add-to-cart" onclick="addToCart('مرمریت کلاسیک سفید')">افزودن به سبد</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- کارت محصول 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=600" alt="سنگ تراورتن مصنوعی">
+                    </div>
+                    <div class="product-info">
+                        <h3>تراورتن نما کرم</h3>
+                        <p>مقاومت بالا در برابر سرما و گرما، مخصوص نمای بیرونی.</p>
+                        <div class="product-footer">
+                            <span class="price">تماس بگیرید</span>
+                            <button class="add-to-cart" onclick="addToCart('تراورتن نما کرم')">افزودن به سبد</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- کارت محصول 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600" alt="سنگ کوارتز">
+                    </div>
+                    <div class="product-info">
+                        <h3>کوارتز مشکی صیقلی</h3>
+                        <p>لوکس و مدرن، ضد خش و مناسب برای آشپزخانه‌های پرتردد.</p>
+                        <div class="product-footer">
+                            <span class="price">تماس بگیرید</span>
+                            <button class="add-to-cart" onclick="addToCart('کوارتز مشکی صیقلی')">افزودن به سبد</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش درباره سنگ (آموزشی) -->
+    <section id="about" class="section bg-light">
+        <div class="container about-container">
+            <div class="about-text">
+                <h2 class="section-title">چرا سنگ مصنوعی؟</h2>
+                <p>سنگ‌های مصنوعی ترکیبی از سنگ‌های طبیعی، رزین‌های پلیمری و پیگمنت‌های رنگی هستند. این ترکیب باعث می‌شود محصول نهایی علاوه بر زیبایی ظاهری، از استحکام فیزیکی بالایی برخوردار باشد.</p>
+                <ul class="features-list">
+                    <li>✅ مقاومت بالا در برابر خط و خش</li>
+                    <li>✅ تنوع بی‌نظیر در رنگ و طرح</li>
+                    <li>✅ نصب آسان و سبک‌تر از سنگ طبیعی</li>
+                    <li>✅ قیمت مناسب‌تر نسبت به سنگ‌های نایاب</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&q=80&w=800" alt="فرآیند تولید سنگ">
+            </div>
+        </div>
+    </section>
+
+    <!-- گالری -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">گالری پروژه‌ها</h2>
+            </div>
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=400" alt="پروژه 1">
+                <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80&w=400" alt="پروژه 2">
+                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=400" alt="پروژه 3">
+                <img src="https://images.unsplash.com/photo-1600563438938-a9a27216b4f5?auto=format&fit=crop&q=80&w=400" alt="پروژه 4">
+            </div>
+        </div>
+    </section>
+
+    <!-- وبلاگ -->
+    <section id="blog" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">مقالات و آموزش</h2>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=400" alt="مقاله 1">
+                    <div class="blog-content">
+                        <span class="blog-date">۱۴۰۳/۰۸/20</span>
+                        <h3>راهنمای نگهداری از سنگ کوارتز</h3>
+                        <p>نکات کلیدی برای تمیز کردن و افزایش عمر سنگ‌های کوارتز در آشپزخانه...</p>
+                        <a href="#" class="read-more">ادامه مطلب &larr;</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80&w=400" alt="مقاله 2">
+                    <div class="blog-content">
+                        <span class="blog-date">۱۴۰۳/۰۸/10</span>
+                        <h3>تفاوت سنگ مصنوعی و طبیعی</h3>
+                        <p>بررسی مقایسه‌ای قیمت، زیبایی و دوام این دو نوع سنگ در ساختمان...</p>
+                        <a href="#" class="read-more">ادامه مطلب &larr;</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer id="contact" class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>آرت استون</h3>
+                <p>پیشرو در صنعت سنگ مصنوعی با تکنولوژی روز دنیا.</p>
+            </div>
+            <div class="footer-col">
+                <h4>دسترسی سریع</h4>
+                <ul>
+                    <li><a href="#products">محصولات</a></li>
+                    <li><a href="#about">درباره ما</a></li>
+                    <li><a href="#blog">وبلاگ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>تماس با ما</h4>
+                <p>📍 کردستان. شهرک صنعتی شمس‌آباد</p>
+                <p>📞 ۰۲۱-۸۸۸۸۸۸۸۸</p>
+                <p>✉️ info@artstone.ir</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© ۱۴۰۴ تمامی حقوق برای آرت استون محفوظ است.</p>
+        </div>
+    </footer>
+
+    <!-- لینک به فایل JS -->
+    <script src="script.js"></script>
+</body>
+</html>
